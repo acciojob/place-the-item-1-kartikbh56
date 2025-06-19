@@ -1,2 +1,40 @@
 
-/* Your CSS Code here. */
+/* Your CSS Code here. *//* styles.css */
+
+/* Styling for the flex container */
+.holder {
+    display: flex; /* Enables flexbox layout */
+    flex-direction: row; /* Arranges items in a row */
+    justify-content: space-between; /* Distributes items evenly; first item at start, last item at end */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if space is insufficient */
+
+    /* Optional: Basic styling for visualization of the holder */
+    background-color: #e0f7fa; /* Light background for the container */
+    padding: 15px;
+    border: 2px solid #00bcd4; /* Cyan border */
+    min-height: 200px; /* Ensure the holder is visible */
+    gap: 10px; /* Adds a consistent gap between rows and columns (modern Flexbox property) */
+    align-content: flex-start; /* Aligns wrapped lines to the start of the container */
+}
+
+/* Styling for the flex items */
+.item {
+    background-color: #673ab7; /* Purple background for items */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    
+    /* These properties ensure items don't squash and can wrap */
+    flex-grow: 0;   /* Prevents items from growing to fill extra space */
+    flex-shrink: 0; /* Prevents items from shrinking */
+    flex-basis: 150px; /* Gives a preferred size; items will wrap if space for this size isn't available */
+    /* You could also use a fixed width: width: 150px; */
+}
+
+/* Add some margin to body for overall page aesthetic, if needed (not explicitly asked but common) */
+body {
+    margin: 20px;
+}
